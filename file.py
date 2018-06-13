@@ -1,4 +1,4 @@
-file = open("myfile.txt","r")
+file = open("myFile.txt","r")
 wc = dict()
 for line in file:
     word = line.split()
