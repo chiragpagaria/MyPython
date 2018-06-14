@@ -2,6 +2,7 @@ file = open("myFile.txt",'r')
 word = list()
 final = list()
 tempW = list()
+couDict = list()
 for line in file:
     for i in line.split():
         word.append(i)
@@ -25,6 +26,16 @@ for i in range(len(word)-1):
     else:
         continue
 print("________________FINAL_________________")
-for i in final:
-    print(i)
+for li in final:
+    wc = dict()
+    for i in li:
+        wc[i] = wc.get(i, 0) + 1
+    couDict.append(wc)
 
+print(type(couDict))
+for i in couDict:
+    print((i))
+
+#for i in range(len(couDict)):
+#    for k in (couDict[i]):
+#        print(k)
