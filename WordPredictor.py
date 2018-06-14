@@ -7,7 +7,7 @@ for line in file:
     for i in line.split():
         word.append(i)
 
-print(word)
+#print(word)
 
 for i in range(len(word)-1):
     tempFinal = list()
@@ -25,17 +25,27 @@ for i in range(len(word)-1):
 
     else:
         continue
-print("________________FINAL_________________")
 for li in final:
     wc = dict()
     for i in li:
         wc[i] = wc.get(i, 0) + 1
     couDict.append(wc)
 
-print(type(couDict))
+final = list()
 for i in couDict:
-    print((i))
+    l = dict()
+    for key, value in sorted(i.items(), key=lambda item: (item[1], item[0])):
+        l[key] = value
+    final.append(l)
+print(final)
 
-#for i in range(len(couDict)):
-#    for k in (couDict[i]):
-#        print(k)
+flag = True
+enterText = input("Enter The word")
+for i in final:
+    if(flag):
+        temp = list(i.keys())
+        if enterText == temp[0]:
+            print("Next Word Will Be ",temp[-1])
+            flag = False
+        else:
+            continue
