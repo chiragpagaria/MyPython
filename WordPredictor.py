@@ -7,8 +7,6 @@ for line in file:
     for i in line.split():
         word.append(i)
 
-#print(word)
-
 for i in range(len(word)-1):
     tempFinal = list()
     if word[i] not in tempW:
