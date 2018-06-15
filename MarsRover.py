@@ -1,3 +1,5 @@
+import matplotlib.pyplot as plt
+
 posn = [0,0]
 
 
@@ -31,4 +33,7 @@ while True:
         if (4 <= Direction <= 1):
             print("Direction Not Specified")
 
-        print(posn)
+
+        plt.scatter(posn[0], posn[1])
+
+plt.show()
